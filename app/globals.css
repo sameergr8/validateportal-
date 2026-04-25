@@ -2,20 +2,53 @@
 
 @import "tailwindcss";
 
+/* ── TrueValidate brand tokens (mirrors CLAUDE.md design system) ── */
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Playfair Display", serif;
+
+  --color-navy: #1E3A5F;
+  --color-navy-dark: #162E4D;
+  --color-navy-mid: #2A4F7C;
+
+  --color-gold: #C8A45A;
+  --color-gold-light: #E8C47A;
+  --color-gold-pale: #FFF8EC;
+
+  --color-canvas: #F0F4F8;
+  --color-surface: #FFFFFF;
+  --color-muted: #EEF3F8;
+  --color-border: #D6E4F0;
+
+  --color-ink: #1A2535;
+  --color-sub: #5A6A7E;
+  --color-grey: #8899AA;
+
+  --color-success: #2E7A5B;
+  --color-success-bg: #EAF5EE;
+  --color-success-border: #B4DEC4;
+
+  --color-warning: #C8810A;
+  --color-warning-bg: #FFF3DC;
+  --color-warning-border: #F0D894;
+
+  --color-danger: #B84040;
+  --color-danger-bg: #FEF0F0;
+  --color-danger-border: #F0C4C4;
+
+  --color-info: #1E5BAF;
+  --color-info-bg: #E8F0FE;
+  --color-info-border: #C4D8FA;
+}
+
 * { box-sizing: border-box; }
-html { font-family: 'DM Sans', sans-serif; }
-body { background: #F0F4F8; color: #1A2535; -webkit-font-smoothing: antialiased; }
-.font-display { font-family: 'Playfair Display', serif; }
+html { font-family: var(--font-sans); }
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
 
 ::-webkit-scrollbar { width: 6px; height: 6px; }
-::-webkit-scrollbar-track { background: #EEF3F8; }
-::-webkit-scrollbar-thumb { background: #C8A45A; border-radius: 3px; }
-
-.badge { display:inline-flex; align-items:center; gap:5px; padding:3px 10px; border-radius:20px; font-size:11px; font-weight:600; letter-spacing:0.3px; }
-.badge-submitted { background:#EEF3F8; color:#1E3A5F; border:1px solid #D6E4F0; }
-.badge-review    { background:#FFF3DC; color:#C8810A; border:1px solid #F0D894; }
-.badge-action    { background:#FEF0F0; color:#B84040; border:1px solid #F0C4C4; }
-.badge-progress  { background:#E8F0FE; color:#1E5BAF; border:1px solid #C4D8FA; }
-.badge-complete  { background:#EAF5EE; color:#2E7A5B; border:1px solid #B4DEC4; }
-.badge-issued    { background:#1E3A5F; color:#C8A45A; border:1px solid #1E3A5F; }
-.gold-line       { height:3px; background:linear-gradient(90deg, #C8A45A, #E8C47A, transparent); border-radius:2px; }
+::-webkit-scrollbar-track { background: var(--color-muted); }
+::-webkit-scrollbar-thumb { background: var(--color-gold); border-radius: 3px; }
