@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+
+@import "tailwindcss";
+
+* { box-sizing: border-box; }
+html { font-family: 'DM Sans', sans-serif; }
+body { background: #F0F4F8; color: #1A2535; -webkit-font-smoothing: antialiased; }
+.font-display { font-family: 'Playfair Display', serif; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #EEF3F8; }
+::-webkit-scrollbar-thumb { background: #C8A45A; border-radius: 3px; }
+
+.badge { display:inline-flex; align-items:center; gap:5px; padding:3px 10px; border-radius:20px; font-size:11px; font-weight:600; letter-spacing:0.3px; }
+.badge-submitted { background:#EEF3F8; color:#1E3A5F; border:1px solid #D6E4F0; }
+.badge-review    { background:#FFF3DC; color:#C8810A; border:1px solid #F0D894; }
+.badge-action    { background:#FEF0F0; color:#B84040; border:1px solid #F0C4C4; }
+.badge-progress  { background:#E8F0FE; color:#1E5BAF; border:1px solid #C4D8FA; }
+.badge-complete  { background:#EAF5EE; color:#2E7A5B; border:1px solid #B4DEC4; }
+.badge-issued    { background:#1E3A5F; color:#C8A45A; border:1px solid #1E3A5F; }
+.gold-line       { height:3px; background:linear-gradient(90deg, #C8A45A, #E8C47A, transparent); border-radius:2px; }
